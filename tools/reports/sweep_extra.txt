@@ -1,0 +1,38 @@
+=== fine_r40 ===
+  Total=61589
+  ** new best **
+=== fine_r42 ===
+  Total=61591
+=== fine_r44 ===
+  Total=61591
+=== fine_r46 ===
+  Total=61595
+=== fine_r48 ===
+  Total=61600
+=== fine_r50 ===
+  Total=61602
+=== fine_r52 ===
+  Total=61611
+=== fine_r54 ===
+  Total=61624
+=== gsc0_180 ===
+  Total=61600
+=== gsc0_200 ===
+  Total=61600
+=== gsc0_210 ===
+  Total=61600
+=== gsc0_220 ===
+  Total=61600
+=== gsc0_230 ===
+  Total=61600
+=== gsc0_240 ===
+  Total=61600
+=== m7 ===
+  Total=61613
+=== m8 ===
+  Total=61600
+=== m9 ===
+  Total=61601
+=== m10 ===
+  Total=61603
+BEST_TAG=fine_r40 BEST=61589
