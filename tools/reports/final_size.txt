@@ -1,0 +1,11 @@
+=== baddestapple size report ===
+RES 64x48 block 8 tiles 256 classes 11 runcodes 40
+ +Tile Class:    128 bytes
+ + Tile Prob:   2805 bytes
+ +  Run Prob:    440 bytes
+ +COMPGlyphs:   2508 bytes
+    Payload :  55035 bytes
+   Sound    :    673 bytes (nominal / from song build)
+ Total:  61589 Bytes (assets)
+ Upstream reference total: 62781
+ Delta vs upstream: -1192

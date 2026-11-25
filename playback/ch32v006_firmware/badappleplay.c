@@ -343,9 +343,7 @@ int main()
 				UpdatePixelMap();
 		}
 
-		funDigitalWrite( PD6, 1 ); // For time monitoring
 		while( (int32_t)(SysTick->CNT - nextFrame) < 0 ) { }
-		funDigitalWrite( PD6, 0 ); // For time monitoring
 
 		nextFrame += 400000; 
 		// 1600000 is 30Hz

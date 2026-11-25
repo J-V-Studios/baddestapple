@@ -1,4 +1,7 @@
-# badder apple
+# badder apple → **baddestapple**
+
+> [!NOTE]
+> This is the **J-V-Studios/baddestapple** fork. Same fidelity, smaller pack: **61,589 B** assets / **61,784 B** FLASH (upstream 62,781 / 62,976). See [BADDESTAPPLE.md](BADDESTAPPLE.md).
 
 > [!IMPORTANT]  
 > The Hackaday X 2026 talk will be posted here once released by hackaday.

@@ -6,3 +6,23 @@
 *.zs
 *.elf
 *.csv
+*.map
+*.o
+vpxtest/vpxtest
+vpxtest/vpxtest_headless
+vpxtest/vpxtest_ab
+vpxtest/bituse.txt
+vpxtest/bitusepersec.txt
+vpxtest/encode_report*.txt
+song/fmcomp-huffman-reverselzss2
+song/fmcomp-vpx-lzss
+song/midiexport
+song/testsynth
+song/*.json
+song/*.xml
+tools/size_report
+tools/extract_stream_from_payload
+tools/reports/encode_*.txt
+# Keep summary/best artifacts
+!playback/ch32v006_firmware/fixedflash.bin
+!playback/ch32v006_firmware/badappleplay.bin

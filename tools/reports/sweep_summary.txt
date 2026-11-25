@@ -1,0 +1,56 @@
+=== default ===
+  Total=62777 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2509
+  ** new best **
+=== classes_8 ===
+  Total=62620 Combined=56246 TileProb=2040 RunProb=1024 Glyphs=2509
+  ** new best **
+=== classes_9 ===
+  Total=62639 Combined=55882 TileProb=2295 RunProb=1152 Glyphs=2509
+=== classes_10 ===
+  Total=62444 Combined=55304 TileProb=2550 RunProb=1280 Glyphs=2509
+  ** new best **
+=== classes_11 ===
+  Total=62264 Combined=54741 TileProb=2805 RunProb=1408 Glyphs=2509
+  ** new best **
+=== classes_12 ===
+  Total=62473 Combined=54567 TileProb=3060 RunProb=1536 Glyphs=2509
+=== classes_13 ===
+  Total=62777 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2509
+=== classes_14 ===
+  Total=62867 Combined=54195 TileProb=3570 RunProb=1792 Glyphs=2509
+=== classes_15 ===
+  Total=63164 Combined=54109 TileProb=3825 RunProb=1920 Glyphs=2509
+=== classes_16 ===
+  Total=63418 Combined=53980 TileProb=4080 RunProb=2048 Glyphs=2509
+=== runcodes_64 ===
+  Total=62077 Combined=54620 TileProb=3315 RunProb=832 Glyphs=2509
+  ** new best **
+=== runcodes_96 ===
+  Total=62395 Combined=54522 TileProb=3315 RunProb=1248 Glyphs=2509
+=== runcodes_112 ===
+  Total=62582 Combined=54501 TileProb=3315 RunProb=1456 Glyphs=2509
+=== runcodes_128 ===
+  Total=62777 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2509
+=== runcodes_144 ===
+  Total=62976 Combined=54479 TileProb=3315 RunProb=1872 Glyphs=2509
+=== runcodes_160 ===
+  Total=63175 Combined=54470 TileProb=3315 RunProb=2080 Glyphs=2509
+=== runcodes_192 ===
+  Total=63579 Combined=54458 TileProb=3315 RunProb=2496 Glyphs=2509
+=== maxpixrun_6 ===
+  Total=62792 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2524
+=== maxpixrun_7 ===
+  Total=62789 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2521
+=== maxpixrun_8 ===
+  Total=62776 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2508
+=== maxpixrun_9 ===
+  Total=62777 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2509
+=== maxpixrun_10 ===
+  Total=62779 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2511
+=== maxpixrun_12 ===
+  Total=62783 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2515
+=== maxpixrun_14 ===
+  Total=62784 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2516
+=== maxpixrun_16 ===
+  Total=62788 Combined=54488 TileProb=3315 RunProb=1664 Glyphs=2520
+BEST_TAG=runcodes_64 BEST_TOTAL=62077

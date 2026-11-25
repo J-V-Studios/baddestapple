@@ -1873,7 +1873,12 @@ int main( int argc, char ** argv )
 #else
 		uint8_t palette[48] = { 0, 0, 0, 255, 255, 255 };
 #endif
+#ifdef HEADLESS
+		ge_GIF * gifout = NULL;
+		(void)palette;
+#else
 		ge_GIF * gifout = ge_new_gif( argv[3], RESX*2, RESY*2, palette, 4, -1, 0 );
+#endif
 		FILE * bituse = fopen ( "bituse.txt", "w" );
 		FILE * bitusekbits = fopen ( "bitusepersec.txt", "w" );
 		int bitssofarthissec = 0;
@@ -2026,12 +2031,14 @@ int main( int argc, char ** argv )
 #endif
 			}
 
+#ifndef HEADLESS
 			for( y = 0; y < BLKY; y++ )
 			for( x = 0; x < BLKX; x++ )
 			{
 				VPDrawGlyph( x*BLOCKSIZE*2, y*BLOCKSIZE*2, x, y, curglyph, prevglyph );
 				VPBlockDrawGif( gifout, x * BLOCKSIZE*2, y * BLOCKSIZE*2, RESX*2, x, y, curglyph, prevglyph );
 			}
+#endif
 
 #ifdef MONITOR_FRAME
 			if( frame == MONITOR_FRAME )
@@ -2048,8 +2055,10 @@ int main( int argc, char ** argv )
 			}
 #endif
 
+#ifndef HEADLESS
 			ge_add_frame(gifout, 2);
 			CNFGSwapBuffers();
+#endif
 			//usleep(100000);
 			int endcount = reader.count;
 			intptr_t endbuffer = (intptr_t)reader.buffer;
@@ -2065,7 +2074,9 @@ int main( int argc, char ** argv )
 		}
 		fclose( bituse );
 		fclose( bitusekbits );
+#ifndef HEADLESS
 		ge_close_gif( gifout );
+#endif
 	}
 
 	FILE * fDataOut = fopen( "badapple_data.h", "w" );

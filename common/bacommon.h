@@ -58,7 +58,9 @@
 // This is mutually exclusive with RUNCODES_TWOLEVEL
 // TUNE THIS!
 // WARNING: DO NOT SET THIS TO ABOVE 254 Otherwise it will overflow on the embedded decoder.
-#define RUNCODES_CONTINUOUS 128  // 84264 -> 83795  [RECOMMEND ON]
+#ifndef RUNCODES_CONTINUOUS
+#define RUNCODES_CONTINUOUS 40  // Tuned for baddestapple (was 128 upstream)
+#endif
 
 #if defined( RUNCODES_TWOLEVEL ) && defined( RUNCODES_CONTINUOUS )
 #error mutually exclusive settings
@@ -81,7 +83,9 @@
 // A more sophisticated algorithm for figuring out probabilities of glyph transitions.
 // WARNING: This cannot be more than 16 because of the classificaiton output.
 // DEEP QUESTION: Why is 15 sometimes a magic number here, regardless of number of tiles?
-#define USE_TILE_CLASSES 13 // TUNE ME!!!
+#ifndef USE_TILE_CLASSES
+#define USE_TILE_CLASSES 11 // Tuned for baddestapple (was 13 upstream)
+#endif
 #define DEDICATE_TILE_CLASS01 1 // Only used for K-Means
 #define EXPECTED_VALUE_GREEDY_OPTIMIZATION 1 // Disable k-means VPX, and instead use a greedy algorithm
 
@@ -105,7 +109,9 @@
 #endif
 
 // TUNE ME !!! 8 to 20
-#define MAXPIXELRUNTOSTORE 9
+#ifndef MAXPIXELRUNTOSTORE
+#define MAXPIXELRUNTOSTORE 8  // Tuned for baddestapple (was 9 upstream)
+#endif
 
 // Don't do this unless you know you want it.
 // This is mostly using to A/B test the encoding of non-1/0 symbols.
@@ -113,11 +119,19 @@
 
 // TUNE ME!!  This controls how likely less-than-most significant bits in pixels are to be set/unset.
 #if defined( VPX_GREY3 )
+#ifndef GSC1
 #define GSC1 0   // If 1, we are guaranteed to be white.
+#endif
+#ifndef GSC0
 #define GSC0 210
+#endif
 #else
+#ifndef GSC1
 #define GSC1 6
+#endif
+#ifndef GSC0
 #define GSC0 248
+#endif
 #endif
 
 
@@ -264,8 +278,18 @@ struct block
 #endif
 };
 
+#ifndef HEADLESS
 #define CNFG_IMPLEMENTATION
 #include "rawdraw_sf.h"
+#else
+/* Stubs so encoder A/B runs without X11. */
+static inline void CNFGSetup( const char * a, int b, int c ) { (void)a;(void)b;(void)c; }
+static inline void CNFGClearFrame( void ) {}
+static inline void CNFGSwapBuffers( void ) {}
+static inline void CNFGBlitImage( uint32_t * d, int x, int y, int w, int h ) { (void)d;(void)x;(void)y;(void)w;(void)h; }
+static inline void CNFGColor( uint32_t c ) { (void)c; }
+static inline void CNFGTackRectangle( short x0, short y0, short x1, short y1 ) { (void)x0;(void)y0;(void)x1;(void)y1; }
+#endif
 
 #ifndef OVERRIDE_RDCALLBACKS
 void HandleKey( int keycode, int bDown ) { }

@@ -214,7 +214,7 @@ int video_decode( const char *filename, int reqw, int reqh)
 
 
 	if (dec_ctx)
-		avcodec_close(dec_ctx);
+		avcodec_free_context(&dec_ctx);
 	avformat_close_input(&fmt_ctx);
 	av_frame_free(&frame);
 	printf( "Done.\n" );
